@@ -127,7 +127,7 @@ class TeamGeneratorApp:
             filetypes=[("텍스트 파일", "*.txt"), ("모든 파일", "*.*")]
         )
         if file_path:
-            with open(file_path, 'w') as file:
+            with open(file_path, 'w', encoding='utf-8') as file:
                 file.write(self.result_text.get("1.0", tk.END))
             messagebox.showinfo("저장 완료", f"파일이 {file_path}에 저장되었습니다.")
 
